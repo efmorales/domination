@@ -113,7 +113,7 @@ function invisibleClass(element){
 
     element.className = "invisible"
 
-    element.style.visibility = "hidden";
+    element.style.visibility = "hidden"; // I know it's not essential, but I wanted to make sure, haha
 
 }
 
@@ -162,17 +162,28 @@ function newHeaders(size, text){
         return newH2;
     } else if (size === 3){
         let newH3 = document.createElement("h3");
-        newH3 = document.createElement("h3");
         newH3.innerText = text;
         return newH3
     } else if (size === 4){
         let newH4 = document.createElement("h4");
-        newH4 = document.createElement("h4");
         newH4.innerText = text;
         return newH4;
+    } else if (size === 5){
+        let newH5 = document.createElement("h5");
+        newH5.innerText = text;
+        return newH5;
     }
 
 }
+
+// ===== SECOND (SHORTER) WAY ======
+// function newHeaders (size, text){
+//     let newH = document.createElement(`h${size}`);
+//     newH.innerText = text;
+//     return newH;
+// }
+
+
 
 // Test it by calling it with a header size and some text, storing the return value in a variable, then appending it to the page (again, use your first function from part 2).
 
